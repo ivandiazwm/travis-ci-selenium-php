@@ -8,6 +8,6 @@ before_script:
   - sleep 3 # give xvfb some time to start
   - #rackup  # start a Web server
   - #sleep 3 # give Web server some time to bind to sockets, etc
-  - cd public; php -S localhost:8000 & ; cd ..
+  - php -S localhost:8000 -t public/ &
 script:
   - "java -jar selenium-server-standalone-2.31.0.jar -htmlSuite http://localhost:8000/ `pwd`/SeleniumTest/tests.html"
