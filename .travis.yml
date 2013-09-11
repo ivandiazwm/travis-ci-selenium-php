@@ -8,4 +8,4 @@ before_script:
   - php -S localhost:8000 -t public/ &
 script:
   - "java -jar selenium-server-standalone-2.31.0.jar -htmlSuite *firefox http://localhost:8000/ /home/travis/build/yandod/travis-ci-selenium-php/SeleniumTest/tests.html ./result"
-  - "php -r 'echo strip_tags(file_get_contents("result"));'"
+  - "php -r 'echo strip_tags(file_get_contents(\'result\''));'"
