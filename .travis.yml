@@ -10,4 +10,4 @@ before_script:
   - #sleep 3 # give Web server some time to bind to sockets, etc
   - php -S localhost:8000 -t public/ &
 script:
-  - "java -jar selenium-server-standalone-2.31.0.jar -htmlSuite *firefox http://localhost:8000/ /home/travis/build/yandod/travis-ci-selenium-php/SeleniumTest/tests.html"
+  - "java -jar selenium-server-standalone-2.31.0.jar -htmlSuite *firefox http://localhost:8000/ /home/travis/build/yandod/travis-ci-selenium-php/SeleniumTest/tests.html ./result"
