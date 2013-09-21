@@ -15,4 +15,8 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "omusubi"
     chef.json = { doc_root: doc_root}
   end
+
+  config.vm.provision :shell, :inline => <<-EOS
+    wget http://selenium.googlecode.com/files/selenium-server-standalone-2.31.0.jar
+  EOS
 end
