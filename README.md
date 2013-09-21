@@ -2,6 +2,8 @@
 
 Selenium IDEで作ったテストケースをTravis CIで継続的インテグレーションする為のテスト。
 
+[![Build Status](https://travis-ci.org/yandod/travis-ci-selenium-php.png?branch=master)](https://travis-ci.org/yandod/travis-ci-selenium-php)
+
 # How to run test
 
 ## from command line
