@@ -1,25 +1,20 @@
 # Skeleteon for running Selenium IDE test cases on Travis
 
-Selenium IDEで作ったテストケースをTravis CIで継続的インテグレーションする為のテスト。
+PHPUnit + Selenium on Travis CI templates.
 
 [![Build Status](https://travis-ci.org/yandod/travis-ci-selenium-php.png?branch=master)](https://travis-ci.org/yandod/travis-ci-selenium-php)
 
-# How to run test
+# How to run test locally.
 
 ## from command line
 
     vagrant up
     vagrant ssh
-    /vagrant_data/SeleniumTest/build.sh
-
-## from Selenium IDE
-
-    vagrant up
-
-open ./SeleniumTest/tests.html from Selenium IDE
+    Xvfb :99 -ac &
+    DISPLAY=:99 java -jar selenium-server-standalone-2.31.0.jar
+    phpunit SeleniumTest
 
 # TODO
 
-- nginx + php-fpm
+- nginx + php-fpm on Travis.
 - Vagrantfile
-- テスト結果の見やすい整形
