@@ -7,6 +7,7 @@ class SampleTest extends PHPUnit_Extensions_Selenium2TestCase
         $this->setHost('127.0.0.1');
         $this->setBrowser('firefox');
         $this->setBrowserUrl('http://127.0.0.1/');
+        $this->setPort(8000);
     }
 
     public function testSimpleClick()
